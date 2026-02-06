@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import palace1 from "@/assets/unit-palace1.jpg";
 import palace2 from "@/assets/unit-palace2.jpg";
 import economy from "@/assets/unit-economy.jpg";
@@ -6,21 +7,25 @@ import express from "@/assets/unit-express.jpg";
 const units = [
   {
     name: "Havana Palace I",
+    slug: "havana-palace-i",
     description: "Luxo e sofisticação no coração da cidade. A unidade flagship da rede, com quartos amplos e serviço impecável.",
     image: palace1,
   },
   {
     name: "Havana Palace II",
+    slug: "havana-palace-ii",
     description: "Elegância contemporânea em localização privilegiada. Ideal para hóspedes que valorizam conforto e praticidade.",
     image: palace2,
   },
   {
     name: "Havana Economy",
+    slug: "havana-economy",
     description: "Conforto essencial com excelente custo-benefício. Perfeito para estadias inteligentes sem abrir mão da qualidade.",
     image: economy,
   },
   {
     name: "Havana Express",
+    slug: "havana-express",
     description: "Agilidade e modernidade para o viajante dinâmico. Check-in rápido e localização estratégica.",
     image: express,
   },
@@ -42,9 +47,9 @@ const Unidades = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {units.map((unit) => (
-            <a
+            <Link
               key={unit.name}
-              href="#"
+              to={`/unidade/${unit.slug}`}
               className="group relative overflow-hidden aspect-[4/3] block"
             >
               <img
@@ -64,7 +69,7 @@ const Unidades = () => {
                   Saiba mais →
                 </span>
               </div>
-            </a>
+            </Link>
           ))}
         </div>
       </div>
