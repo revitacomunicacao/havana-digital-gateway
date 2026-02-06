@@ -1,22 +1,25 @@
 import { useState, useEffect, useCallback } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import hero1 from "@/assets/hero-1.jpg";
+import hero1webp from "@/assets/hero-1.webp"
 import hero2 from "@/assets/hero-2.jpg";
+import hero2webp from "@/assets/hero-2.webp"
 import hero3 from "@/assets/hero-3.jpg";
+import hero3webp from "@/assets/hero-3.webp"
 
 const slides = [
   {
-    image: hero1,
+    image: hero1webp,
     title: "Bem-vindo à\nRede Havana",
     subtitle: "Hospitalidade que transforma cada momento em uma experiência memorável.",
   },
   {
-    image: hero2,
+    image: hero2webp,
     title: "Conforto &\nElegância",
     subtitle: "Quartos projetados para o máximo de sofisticação e descanso.",
   },
   {
-    image: hero3,
+    image: hero3webp,
     title: "Viva\nMomentos Únicos",
     subtitle: "Lazer, gastronomia e experiências exclusivas esperam por você.",
   },
