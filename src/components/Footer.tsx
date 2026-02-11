@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
-            <img src={logo} alt="Rede Havana" className="h-24 w-auto mb-4" />
+            <img src={logo} alt="Rede Havana" className="h-[150px] w-auto mb-4" />
             <p className="text-primary-foreground/60 font-body text-sm leading-relaxed">
               Hospitalidade com excelência há mais de 20 anos.
             </p>
