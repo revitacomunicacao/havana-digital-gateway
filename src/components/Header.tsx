@@ -9,8 +9,8 @@ const navLinks = [
   { label: "Havana Palace II", href: "/unidade/havana-palace-ii" },
   { label: "Havana Economy", href: "/unidade/havana-economy" },
   { label: "Havana Express", href: "/unidade/havana-express" },
-  { label: "Agenda Cultural", href: "/#novidades" },
-  { label: "Informações Turísticas", href: "/#novidades" },
+  { label: "Agenda Cultural", href: "/agenda-cultural" },
+  { label: "Informações Turísticas", href: "/informacoes-turisticas" },
 ];
 
 const Header = () => {
@@ -18,15 +18,15 @@ const Header = () => {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/95 backdrop-blur-sm">
-      <div className="container flex items-center justify-between h-20">
+      <div className="container flex items-center justify-between h-24">
         <Link to="/" className="flex items-center gap-3">
-          <img src={logo} alt="Rede Havana" className="h-14 w-auto" />
+          <img src={logo} alt="Rede Havana" className="h-20 w-auto" />
         </Link>
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) =>
-            link.href.startsWith("/unidade") ? (
+            link.href.startsWith("/") ? (
               <Link
                 key={link.label}
                 to={link.href}
@@ -60,7 +60,7 @@ const Header = () => {
       {mobileOpen && (
         <nav className="lg:hidden bg-primary border-t border-primary-foreground/10 pb-6">
           {navLinks.map((link) =>
-            link.href.startsWith("/unidade") ? (
+            link.href.startsWith("/") ? (
               <Link
                 key={link.label}
                 to={link.href}
