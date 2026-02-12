@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X, Calendar, MapPin, Clock } from "lucide-react";
+import { X, Calendar, MapPin, Clock, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -19,6 +19,7 @@ interface CulturalEvent {
   description: string;
   image: string;
   category: string;
+  externalLink?: string;
 }
 
 const events: CulturalEvent[] = [
@@ -31,6 +32,7 @@ const events: CulturalEvent[] = [
     description: "Uma noite inesquecível com os maiores nomes da música regional amazônica. Shows ao vivo, praça de alimentação e muito entretenimento para toda a família.",
     image: event1,
     category: "Música",
+    externalLink: "https://www.google.com/search?q=Festival+de+Musica+Regional",
   },
   {
     id: 2,
@@ -111,7 +113,13 @@ const AgendaCultural = () => {
               <div
                 key={event.id}
                 className="group relative rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 cursor-pointer bg-card"
-                onClick={() => setSelectedEvent(event)}
+                onClick={() => {
+                  if (event.externalLink) {
+                    window.open(event.externalLink, "_blank", "noopener,noreferrer");
+                  } else {
+                    setSelectedEvent(event);
+                  }
+                }}
               >
                 <div className="aspect-[4/3] overflow-hidden">
                   <img
@@ -133,8 +141,9 @@ const AgendaCultural = () => {
                     <Calendar size={14} />
                     <span>{event.date}</span>
                   </div>
-                  <button className="px-6 py-2 border border-primary-foreground/40 text-primary-foreground text-sm font-body uppercase tracking-wider hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all duration-300 rounded">
+                  <button className="inline-flex items-center gap-2 px-6 py-2 border border-primary-foreground/40 text-primary-foreground text-sm font-body uppercase tracking-wider hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all duration-300 rounded">
                     Saiba Mais
+                    {event.externalLink && <ExternalLink size={14} />}
                   </button>
                 </div>
               </div>

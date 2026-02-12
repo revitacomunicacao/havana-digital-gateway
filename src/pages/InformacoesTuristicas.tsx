@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { X, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
@@ -18,6 +18,7 @@ interface TouristSpot {
   image: string;
   category: string;
   items: string[];
+  externalLink?: string;
 }
 
 const spots: TouristSpot[] = [
@@ -26,6 +27,7 @@ const spots: TouristSpot[] = [
     title: "Igrejas e Patrimônio Histórico",
     image: tourism1,
     category: "Patrimônio",
+    externalLink: "https://www.google.com/search?q=Igrejas+Patrimonio+Historico+Uberaba",
     items: [
       "Igreja de São Sebastião – construção histórica no centro da cidade.",
       "Catedral Sagrado Coração de Jesus – imponente arquitetura religiosa.",
@@ -147,7 +149,13 @@ const InformacoesTuristicas = () => {
               <div
                 key={spot.id}
                 className="group relative aspect-square rounded-2xl overflow-hidden cursor-pointer shadow-lg hover:shadow-2xl transition-all duration-500"
-                onClick={() => setSelectedSpot(spot)}
+                onClick={() => {
+                  if (spot.externalLink) {
+                    window.open(spot.externalLink, "_blank", "noopener,noreferrer");
+                  } else {
+                    setSelectedSpot(spot);
+                  }
+                }}
               >
                 <img
                   src={spot.image}
@@ -159,8 +167,9 @@ const InformacoesTuristicas = () => {
                   <h3 className="font-display text-lg text-primary-foreground text-center px-4 mb-3">
                     {spot.title}
                   </h3>
-                  <button className="px-6 py-2 border border-primary-foreground/60 text-primary-foreground text-sm font-body uppercase tracking-wider hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all duration-300 rounded">
+                  <button className="inline-flex items-center gap-2 px-6 py-2 border border-primary-foreground/60 text-primary-foreground text-sm font-body uppercase tracking-wider hover:bg-secondary hover:text-secondary-foreground hover:border-secondary transition-all duration-300 rounded">
                     Saiba Mais
+                    {spot.externalLink && <ExternalLink size={14} />}
                   </button>
                 </div>
               </div>
