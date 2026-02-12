@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ArrowLeft, Phone, Mail, MapPin, Wifi, Coffee, Dumbbell, Car, Clock, ChevronLeft, ChevronRight, X } from "lucide-react";
+import { ArrowLeft, Phone, Mail, MapPin, Wifi, Coffee, Dumbbell, Car, Clock, ChevronLeft, ChevronRight, X, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import type { UnitData } from "@/data/units";
@@ -19,6 +19,30 @@ const getIcon = (amenity: string) => {
   return key ? amenityIcons[key] : <Coffee size={20} />;
 };
 
+// Room types per unit
+const roomTypes: Record<string, { tipo: string; capacidade: string; diferenciais: string[] }[]> = {
+  "havana-palace-i": [
+    { tipo: "Standard", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV a cabo", "Frigobar", "Wi-Fi", "Café incluso"] },
+    { tipo: "Luxo", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV 50\"", "Frigobar", "Wi-Fi", "Café incluso", "Room Service"] },
+    { tipo: "Suíte Master", capacidade: "3 pessoas", diferenciais: ["Ar-condicionado", "TV 55\"", "Frigobar", "Wi-Fi", "Café incluso", "Room Service", "Banheira", "Sala de estar"] },
+  ],
+  "havana-palace-ii": [
+    { tipo: "Standard", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV a cabo", "Frigobar", "Wi-Fi", "Café incluso"] },
+    { tipo: "Luxo", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV 50\"", "Frigobar", "Wi-Fi", "Café incluso", "Vista panorâmica"] },
+    { tipo: "Suíte Premium", capacidade: "3 pessoas", diferenciais: ["Ar-condicionado", "TV 55\"", "Frigobar", "Wi-Fi", "Café incluso", "Varanda", "Sala de estar"] },
+  ],
+  "havana-economy": [
+    { tipo: "Standard", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV a cabo", "Wi-Fi", "Café incluso"] },
+    { tipo: "Standard Duplo", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV a cabo", "Wi-Fi", "Café incluso", "2 camas de solteiro"] },
+    { tipo: "Triplo", capacidade: "3 pessoas", diferenciais: ["Ar-condicionado", "TV a cabo", "Wi-Fi", "Café incluso", "Frigobar"] },
+  ],
+  "havana-express": [
+    { tipo: "Single", capacidade: "1 pessoa", diferenciais: ["Ar-condicionado", "TV a cabo", "Wi-Fi", "Café incluso", "Check-in express"] },
+    { tipo: "Standard", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV a cabo", "Frigobar", "Wi-Fi", "Café incluso"] },
+    { tipo: "Duplo", capacidade: "2 pessoas", diferenciais: ["Ar-condicionado", "TV a cabo", "Frigobar", "Wi-Fi", "Café incluso", "2 camas"] },
+  ],
+};
+
 interface UnitPageProps {
   unit: UnitData;
 }
@@ -32,6 +56,8 @@ const UnitPage = ({ unit }: UnitPageProps) => {
     setLightboxIndex((i) => (i !== null ? (i - 1 + unit.gallery.length) % unit.gallery.length : null));
   const nextImage = () =>
     setLightboxIndex((i) => (i !== null ? (i + 1) % unit.gallery.length : null));
+
+  const rooms = roomTypes[unit.slug] || [];
 
   return (
     <div className="min-h-screen">
@@ -78,8 +104,53 @@ const UnitPage = ({ unit }: UnitPageProps) => {
         </div>
       </section>
 
+      {/* Room Types Table */}
+      {rooms.length > 0 && (
+        <section className="py-20 bg-background">
+          <div className="container">
+            <div className="text-center mb-12">
+              <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
+                Acomodações
+              </span>
+              <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-primary">
+                Tipos de Quarto
+              </h2>
+              <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
+            </div>
+            <div className="max-w-5xl mx-auto overflow-x-auto">
+              <table className="w-full border-collapse">
+                <thead>
+                  <tr className="border-b-2 border-secondary/30">
+                    <th className="text-left py-4 px-6 font-display text-sm uppercase tracking-wider text-primary">Tipo de Quarto</th>
+                    <th className="text-left py-4 px-6 font-display text-sm uppercase tracking-wider text-primary">Capacidade</th>
+                    <th className="text-left py-4 px-6 font-display text-sm uppercase tracking-wider text-primary">Diferenciais</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {rooms.map((room) => (
+                    <tr key={room.tipo} className="border-b border-border hover:bg-muted/50 transition-colors">
+                      <td className="py-5 px-6 font-display text-base font-semibold text-primary">{room.tipo}</td>
+                      <td className="py-5 px-6 font-body text-sm text-muted-foreground">{room.capacidade}</td>
+                      <td className="py-5 px-6">
+                        <div className="flex flex-wrap gap-2">
+                          {room.diferenciais.map((d) => (
+                            <span key={d} className="inline-block bg-muted text-muted-foreground font-body text-xs px-3 py-1 border border-border">
+                              {d}
+                            </span>
+                          ))}
+                        </div>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Amenities */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted">
         <div className="container">
           <div className="text-center mb-12">
             <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
@@ -94,7 +165,7 @@ const UnitPage = ({ unit }: UnitPageProps) => {
             {unit.amenities.map((amenity) => (
               <div
                 key={amenity}
-                className="flex flex-col items-center gap-3 p-6 border border-border hover:border-secondary/40 transition-colors duration-300"
+                className="flex flex-col items-center gap-3 p-6 border border-border hover:border-secondary/40 transition-colors duration-300 bg-background"
               >
                 <span className="text-secondary">{getIcon(amenity)}</span>
                 <span className="text-foreground font-body text-sm text-center">{amenity}</span>
@@ -105,7 +176,7 @@ const UnitPage = ({ unit }: UnitPageProps) => {
       </section>
 
       {/* Gallery */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
@@ -139,14 +210,74 @@ const UnitPage = ({ unit }: UnitPageProps) => {
         </div>
       </section>
 
-      {/* Contact */}
+      {/* Map + Location */}
+      <section className="py-20 bg-muted">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
+              Como chegar
+            </span>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-primary">
+              Localização
+            </h2>
+            <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
+          </div>
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-background border border-border p-8 text-center">
+              <MapPin size={40} className="text-secondary mx-auto mb-4" />
+              <p className="font-display text-xl font-semibold text-primary mb-2">{unit.name}</p>
+              <p className="text-muted-foreground font-body text-base mb-6">{unit.address}</p>
+              <a
+                href={unit.mapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 text-secondary hover:text-secondary/80 font-body text-sm uppercase tracking-wider transition-colors"
+              >
+                <ExternalLink size={16} /> Abrir no Google Maps
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Reserve */}
       <section className="py-20 bg-navy-gradient">
+        <div className="container text-center">
+          <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
+            Garanta sua estadia
+          </span>
+          <h2 className="mt-4 font-display text-3xl md:text-5xl font-semibold text-primary-foreground">
+            Reserve Agora
+          </h2>
+          <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
+          <p className="mt-6 text-primary-foreground/70 font-body text-lg font-light max-w-lg mx-auto">
+            Entre em contato e garanta as melhores tarifas para sua próxima estadia no {unit.name}.
+          </p>
+          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href={`tel:${unit.phone}`}
+              className="inline-flex items-center gap-3 bg-secondary text-secondary-foreground px-8 py-4 font-body text-sm uppercase tracking-wider hover:bg-secondary/90 transition-colors duration-300"
+            >
+              <Phone size={18} /> Ligar agora
+            </a>
+            <a
+              href={`mailto:${unit.email}`}
+              className="inline-flex items-center gap-3 border border-primary-foreground/20 text-primary-foreground px-8 py-4 font-body text-sm uppercase tracking-wider hover:border-secondary hover:text-secondary transition-colors duration-300"
+            >
+              <Mail size={18} /> Enviar e-mail
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact */}
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
               Contato
             </span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-primary-foreground">
+            <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-primary">
               Entre em contato
             </h2>
             <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
@@ -154,26 +285,26 @@ const UnitPage = ({ unit }: UnitPageProps) => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
             <a
               href={`tel:${unit.phone}`}
-              className="flex flex-col items-center gap-3 p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-colors"
+              className="flex flex-col items-center gap-3 p-8 border border-border hover:border-secondary/40 transition-colors"
             >
               <Phone size={24} className="text-secondary" />
-              <span className="text-primary-foreground font-body text-sm">{unit.phone}</span>
+              <span className="text-foreground font-body text-sm">{unit.phone}</span>
             </a>
             <a
               href={`mailto:${unit.email}`}
-              className="flex flex-col items-center gap-3 p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-colors"
+              className="flex flex-col items-center gap-3 p-8 border border-border hover:border-secondary/40 transition-colors"
             >
               <Mail size={24} className="text-secondary" />
-              <span className="text-primary-foreground font-body text-sm">{unit.email}</span>
+              <span className="text-foreground font-body text-sm">{unit.email}</span>
             </a>
             <a
               href={unit.mapUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center gap-3 p-8 border border-primary-foreground/10 hover:border-secondary/40 transition-colors"
+              className="flex flex-col items-center gap-3 p-8 border border-border hover:border-secondary/40 transition-colors"
             >
               <MapPin size={24} className="text-secondary" />
-              <span className="text-primary-foreground font-body text-sm text-center">{unit.address}</span>
+              <span className="text-foreground font-body text-sm text-center">{unit.address}</span>
             </a>
           </div>
         </div>

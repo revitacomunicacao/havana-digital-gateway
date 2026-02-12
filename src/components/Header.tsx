@@ -4,7 +4,7 @@ import { Menu, X } from "lucide-react";
 import logo from "@/assets/logo_havana.webp";
 
 const navLinks = [
-  { label: "Quem Somos", href: "/#quem-somos" },
+  { label: "Quem Somos", href: "/quem-somos" },
   { label: "Havana Palace I", href: "/unidade/havana-palace-i" },
   { label: "Havana Palace II", href: "/unidade/havana-palace-ii" },
   { label: "Havana Economy", href: "/unidade/havana-economy" },
