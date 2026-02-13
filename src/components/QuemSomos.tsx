@@ -1,8 +1,8 @@
 const QuemSomos = () => {
   return (
     <section id="quem-somos" className="py-24 md:py-32 bg-muted">
-      <div className="flex flex-col md:flex-row">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="flex flex-col justify-center items-center md:flex-row gap-4">
+        <div className="md:w-[70%] w-[90%] text-center">
           <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
             Sobre nós
           </span>
@@ -22,7 +22,7 @@ const QuemSomos = () => {
           </p>
         </div>
 
-        <div className="flex flex-col">
+        <div className="rounded-xl md:w-[20%] w-[80%] flex flex-col bg-[#feecd7]">
           {[
             { number: "4", label: "Unidades" },
             { number: "+20", label: "Anos de experiência" },
