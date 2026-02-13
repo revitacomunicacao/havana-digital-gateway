@@ -1,7 +1,7 @@
 const QuemSomos = () => {
   return (
     <section id="quem-somos" className="py-24 md:py-32 bg-muted">
-      <div className="container">
+      <div className="flex flex-col md:flex-row">
         <div className="max-w-3xl mx-auto text-center">
           <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
             Sobre nós
@@ -22,13 +22,13 @@ const QuemSomos = () => {
           </p>
         </div>
 
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="flex flex-col">
           {[
             { number: "4", label: "Unidades" },
             { number: "+20", label: "Anos de experiência" },
             { number: "+500", label: "Quartos disponíveis" },
           ].map((stat) => (
-            <div key={stat.label} className="text-center">
+            <div key={stat.label} className="text-center py-4 pr-6">
               <span className="font-display text-5xl font-bold text-gold-gradient">
                 {stat.number}
               </span>
