@@ -83,9 +83,9 @@ export const units: UnitData[] = [
   {
     slug: "havana-palace-i",
     name: "Havana Palace I",
-    tagline: "Luxo e sofisticação no coração da cidade",
+    tagline: "Conforto, tradicionalismo e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
     description:
-      "A unidade flagship da Rede Havana oferece uma experiência incomparável de hospedagem. Com quartos amplos e elegantemente decorados, restaurante de alta gastronomia, spa completo e centro de convenções, o Havana Palace I é a escolha ideal para viajantes exigentes que buscam o melhor em conforto e serviço personalizado.",
+      "Conforto, tradicionalismo e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
     heroImage: fotosPalace1_19,
     gallery: [
       { src: fotosPalace1_19, alt: "Hotel" },
@@ -127,9 +127,9 @@ export const units: UnitData[] = [
   {
     slug: "havana-palace-ii",
     name: "Havana Palace II",
-    tagline: "Elegância contemporânea em localização privilegiada",
+    tagline: "Construção arrojada, quartos confortáveis, restaurante com delicioso café da manhã e serviço de jantar e excelência no atendimento. Tudo isso com padrão Rede Havana de qualidade.",
     description:
-      "O Havana Palace II combina design contemporâneo com o padrão de excelência da Rede Havana. Localizado em uma região estratégica da cidade, oferece quartos modernos, restaurante com culinária regional e internacional, salas de reunião equipadas e uma piscina com vista panorâmica.",
+      "Construção arrojada, quartos confortáveis, restaurante com delicioso café da manhã e serviço de jantar e excelência no atendimento. Tudo isso com padrão Rede Havana de qualidade.",
     heroImage: fotosPalace2_13,
     gallery: [
       { src: fotosPalace2_1, alt: "Hotel" },
@@ -164,9 +164,9 @@ export const units: UnitData[] = [
   {
     slug: "havana-economy",
     name: "Havana Economy",
-    tagline: "Conforto essencial com excelente custo-benefício",
+    tagline: "Conforto, preços econômicos e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
     description:
-      "O Havana Economy é ideal para quem busca uma estadia confortável e prática sem abrir mão da qualidade. Quartos funcionais e bem equipados, café da manhã incluso, localização central e todo o padrão de atendimento que só a Rede Havana oferece.",
+      "Conforto, preços econômicos e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
     heroImage: fotosEconomy_8,
     gallery: [
       { src: fotosEconomy_8, alt: "Hotel" },
@@ -194,9 +194,9 @@ export const units: UnitData[] = [
   {
     slug: "havana-express",
     name: "Havana Express",
-    tagline: "Agilidade e modernidade para o viajante dinâmico",
+    tagline: "Conforto, delicioso café da manhã e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
     description:
-      "Projetado para o viajante moderno, o Havana Express oferece check-in rápido, quartos inteligentes com tecnologia de ponta e localização estratégica próxima ao aeroporto e centros comerciais. A solução perfeita para quem precisa de praticidade com qualidade.",
+      "Conforto, delicioso café da manhã e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
     heroImage: fotosExpress_1,
     gallery: [
       { src: fotosExpress_1, alt: "Hotel" },
