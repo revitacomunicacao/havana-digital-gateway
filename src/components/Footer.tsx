@@ -42,14 +42,14 @@ const Footer = () => {
           <div>
             <h4 className="font-display text-lg text-primary-foreground mb-4">Contato</h4>
             <div className="space-y-3">
-              <a href="tel:+55000000000" className="flex items-center gap-2 text-primary-foreground/60 hover:text-secondary text-sm font-body transition-colors">
-                <Phone size={14} /> (00) 0000-0000
+              <a href="https://wa.me/5534988414517?text=Ol%C3%A1%20Havana%20Hot%C3%A9is!%0A%0AVisitei%20o%20seu%20site%20e%20tenho%20interesse%20de%20efetuar%20uma%20reserva%2C%20consegue%20me%20auxiliar%20%3F" className="flex items-center gap-2 text-primary-foreground/60 hover:text-secondary text-sm font-body transition-colors">
+                <Phone size={14} /> (34) 98841-4517
               </a>
-              <a href="mailto:contato@redehavana.com.br" className="flex items-center gap-2 text-primary-foreground/60 hover:text-secondary text-sm font-body transition-colors">
-                <Mail size={14} /> contato@redehavana.com.br
+              <a href="mailto:reservas@redehavana.com.br" className="flex items-center gap-2 text-primary-foreground/60 hover:text-secondary text-sm font-body transition-colors">
+                <Mail size={14} /> reservas@redehavana.com.br
               </a>
               <p className="flex items-start gap-2 text-primary-foreground/60 text-sm font-body">
-                <MapPin size={14} className="mt-0.5 shrink-0" /> Manaus - AM, Brasil
+                <MapPin size={14} className="mt-0.5 shrink-0" /> Uberaba - MG, Brasil
               </p>
             </div>
           </div>

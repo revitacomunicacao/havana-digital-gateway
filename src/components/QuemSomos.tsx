@@ -1,6 +1,6 @@
 const QuemSomos = () => {
   return (
-    <section id="quem-somos" className="py-24 md:py-32 bg-muted">
+    <section id="quem-somos" className="py-24 md:py-12 bg-muted">
       <div className="flex flex-col justify-center items-center md:flex-row gap-4">
         <div className="md:w-[70%] w-[90%] text-center">
           <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">

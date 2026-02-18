@@ -35,7 +35,7 @@ const diferenciais = [
 
 const Diferenciais = () => {
   return (
-    <section className="py-24 md:py-32 bg-background">
+    <section className="py-24 md:py-12 bg-background">
       <div className="container">
         <div className="text-center mb-16">
           <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">

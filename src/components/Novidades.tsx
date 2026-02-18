@@ -5,7 +5,7 @@ import novaUnidade3 from "@/assets/nova-unidade-3.jpg";
 
 const Novidades = () => {
   return (
-    <section id="novidades" className="py-24 md:py-32 bg-navy-gradient">
+    <section id="novidades" className="py-24 md:py-12 bg-navy-gradient">
       <div className="container">
         <div className="text-center mb-16">
           <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
