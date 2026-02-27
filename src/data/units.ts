@@ -89,6 +89,30 @@ import fotosEconomy_5 from "@/assets/Fotos hotel/economy/economy (5).webp"
 import fotosEconomy_6 from "@/assets/Fotos hotel/economy/economy (6).webp"
 import fotosEconomy_7 from "@/assets/Fotos hotel/economy/economy (7).webp"
 import fotosEconomy_8 from "@/assets/Fotos hotel/economy/economy (8).webp"
+import fotosEconomy_9 from "@/assets/Fotos hotel/economy/economy (9).webp"
+import fotosEconomy_10 from "@/assets/Fotos hotel/economy/economy (10).webp"
+import fotosEconomy_11 from "@/assets/Fotos hotel/economy/economy (11).webp"
+import fotosEconomy_12 from "@/assets/Fotos hotel/economy/economy (12).webp"
+import fotosEconomy_13 from "@/assets/Fotos hotel/economy/economy (13).webp"
+import fotosEconomy_14 from "@/assets/Fotos hotel/economy/economy (14).webp"
+import fotosEconomy_15 from "@/assets/Fotos hotel/economy/economy (15).webp"
+import fotosEconomy_16 from "@/assets/Fotos hotel/economy/economy (16).webp"
+import fotosEconomy_17 from "@/assets/Fotos hotel/economy/economy (17).webp"
+import fotosEconomy_18 from "@/assets/Fotos hotel/economy/economy (18).webp"
+import fotosEconomy_19 from "@/assets/Fotos hotel/economy/economy (19).webp"
+import fotosEconomy_20 from "@/assets/Fotos hotel/economy/economy (20).webp"
+import fotosEconomy_21 from "@/assets/Fotos hotel/economy/economy (21).webp"
+import fotosEconomy_22 from "@/assets/Fotos hotel/economy/economy (22).webp"
+import fotosEconomy_23 from "@/assets/Fotos hotel/economy/economy (23).webp"
+import fotosEconomy_24 from "@/assets/Fotos hotel/economy/economy (24).webp"
+import fotosEconomy_25 from "@/assets/Fotos hotel/economy/economy (25).webp"
+import fotosEconomy_26 from "@/assets/Fotos hotel/economy/economy (26).webp"
+import fotosEconomy_27 from "@/assets/Fotos hotel/economy/economy (27).webp"
+import fotosEconomy_28 from "@/assets/Fotos hotel/economy/economy (28).webp"
+import fotosEconomy_29 from "@/assets/Fotos hotel/economy/economy (29).webp"
+import fotosEconomy_30 from "@/assets/Fotos hotel/economy/economy (30).webp"
+import fotosEconomy_31 from "@/assets/Fotos hotel/economy/economy (31).webp"
+
 
 import fotosExpress_1 from "@/assets/Fotos hotel/express/express (1).webp"
 import fotosExpress_2 from "@/assets/Fotos hotel/express/express (2).webp"
@@ -242,9 +266,8 @@ export const units: UnitData[] = [
     tagline: "O Hotel é especializado em atender demandas econômicas, proporcionando uma estrutura com mais de 150 apartamentos.",
     description:
       "O Hotel é especializado em atender demandas econômicas, proporcionando uma estrutura com mais de 150 apartamentos.",
-    heroImage: fotosEconomy_8,
+    heroImage: fotosEconomy_31,
     gallery: [
-      { src: fotosEconomy_8, alt: "Hotel" },
       { src: fotosEconomy_1, alt: "Hotel" },
       { src: fotosEconomy_2, alt: "Hotel" },
       { src: fotosEconomy_3, alt: "Hotel" },
@@ -252,6 +275,30 @@ export const units: UnitData[] = [
       { src: fotosEconomy_5, alt: "Hotel" },
       { src: fotosEconomy_6, alt: "Hotel" },
       { src: fotosEconomy_7, alt: "Hotel" },
+      { src: fotosEconomy_8, alt: "Hotel" },
+      { src: fotosEconomy_9, alt: "Hotel" },
+      { src: fotosEconomy_10, alt: "Hotel" },
+      { src: fotosEconomy_11, alt: "Hotel" },
+      { src: fotosEconomy_12, alt: "Hotel" },
+      { src: fotosEconomy_13, alt: "Hotel" },
+      { src: fotosEconomy_14, alt: "Hotel" },
+      { src: fotosEconomy_15, alt: "Hotel" },
+      { src: fotosEconomy_16, alt: "Hotel" },
+      { src: fotosEconomy_17, alt: "Hotel" },
+      { src: fotosEconomy_18, alt: "Hotel" },
+      { src: fotosEconomy_19, alt: "Hotel" },
+      { src: fotosEconomy_20, alt: "Hotel" },
+      { src: fotosEconomy_21, alt: "Hotel" },
+      { src: fotosEconomy_22, alt: "Hotel" },
+      { src: fotosEconomy_23, alt: "Hotel" },
+      { src: fotosEconomy_24, alt: "Hotel" },
+      { src: fotosEconomy_25, alt: "Hotel" },
+      { src: fotosEconomy_26, alt: "Hotel" },
+      { src: fotosEconomy_27, alt: "Hotel" },
+      { src: fotosEconomy_28, alt: "Hotel" },
+      { src: fotosEconomy_29, alt: "Hotel" },
+      { src: fotosEconomy_30, alt: "Hotel" },
+      { src: fotosEconomy_31, alt: "Hotel" },
     ],
     amenities: [
       "Café da Manhã",
