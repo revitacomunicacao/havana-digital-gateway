@@ -26,20 +26,16 @@ const Novidades = () => {
 
             <div className="mt-6 space-y-4 text-primary-foreground/80 font-body text-base leading-relaxed">
               <p>
-                A <strong className="text-primary-foreground">Havana Hotéis</strong> tem o orgulho de anunciar a restauração de um{" "}
-                <strong className="text-primary-foreground">grande ícone da cidade</strong>, um hotel histórico que será transformado em uma experiência única, onde{" "}
-                <em className="text-secondary">o passado e o futuro se encontram</em>.
-              </p>
-              <p>
-                Combinando <strong className="text-primary-foreground">elegância, tradição e inovação</strong>, esse novo empreendimento trará todo o charme de sua história aliado ao{" "}
-                <strong className="text-primary-foreground">conforto e sofisticação</strong> que só a nossa rede pode oferecer.
+                Localizado no centro da cidade, o Grande Hotel Havana oferece a maior estrutura de Uberaba. Sendo a escolha ideal para empresas que precisam acomodar equipes em projetos, operações e obras de grande porte, com conforto e praticidade. Com capacidade para receber até 400 pessoas, seus colaboradores encontram aqui um ambiente organizado, seguro e bem cuidado, preparado para atender demandas corporativas com qualidade.
               </p>
               <p className="text-secondary font-semibold">
-                Prepare-se para viver a história com todo o requinte do futuro!
+                Comodidades/serviços:
               </p>
-              <p className="text-primary-foreground/60 italic">
-                Em breve, um novo capítulo da hotelaria em Uberaba.
-              </p>
+              <ul>
+                <li>Café da Manhã</li>
+                <li>Acesso à Internet</li>
+                <li>Estacionamento</li>
+              </ul>
             </div>
 
             {/* Mini gallery */}

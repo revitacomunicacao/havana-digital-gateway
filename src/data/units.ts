@@ -31,6 +31,23 @@ import fotosPalace1_16 from "@/assets/Fotos hotel/palace 1/palace 1 (16).webp"
 import fotosPalace1_17 from "@/assets/Fotos hotel/palace 1/palace 1 (17).webp"
 import fotosPalace1_18 from "@/assets/Fotos hotel/palace 1/palace 1 (18).webp"
 import fotosPalace1_19 from "@/assets/Fotos hotel/palace 1/palace 1 (19).webp"
+import fotosPalace1_20 from "@/assets/Fotos hotel/palace 1/palace 1 (20).webp"
+import fotosPalace1_21 from "@/assets/Fotos hotel/palace 1/palace 1 (21).webp"
+import fotosPalace1_22 from "@/assets/Fotos hotel/palace 1/palace 1 (22).webp"
+import fotosPalace1_23 from "@/assets/Fotos hotel/palace 1/palace 1 (23).webp"
+import fotosPalace1_24 from "@/assets/Fotos hotel/palace 1/palace 1 (24).webp"
+import fotosPalace1_25 from "@/assets/Fotos hotel/palace 1/palace 1 (25).webp"
+import fotosPalace1_26 from "@/assets/Fotos hotel/palace 1/palace 1 (26).webp"
+import fotosPalace1_27 from "@/assets/Fotos hotel/palace 1/palace 1 (27).webp"
+import fotosPalace1_28 from "@/assets/Fotos hotel/palace 1/palace 1 (28).webp"
+import fotosPalace1_29 from "@/assets/Fotos hotel/palace 1/palace 1 (29).webp"
+import fotosPalace1_30 from "@/assets/Fotos hotel/palace 1/palace 1 (30).webp"
+import fotosPalace1_31 from "@/assets/Fotos hotel/palace 1/palace 1 (31).webp"
+import fotosPalace1_32 from "@/assets/Fotos hotel/palace 1/palace 1 (32).webp"
+import fotosPalace1_33 from "@/assets/Fotos hotel/palace 1/palace 1 (33).webp"
+import fotosPalace1_34 from "@/assets/Fotos hotel/palace 1/palace 1 (34).webp"
+import fotosPalace1_35 from "@/assets/Fotos hotel/palace 1/palace 1 (35).webp"
+import fotosPalace1_36 from "@/assets/Fotos hotel/palace 1/palace 1 (36).webp"
 
 import fotosPalace2_1 from "@/assets/Fotos hotel/palace 2/palace 2 (1).webp"
 import fotosPalace2_2 from "@/assets/Fotos hotel/palace 2/palace 2 (2).webp"
@@ -45,6 +62,24 @@ import fotosPalace2_10 from "@/assets/Fotos hotel/palace 2/palace 2 (10).webp"
 import fotosPalace2_11 from "@/assets/Fotos hotel/palace 2/palace 2 (11).webp"
 import fotosPalace2_12 from "@/assets/Fotos hotel/palace 2/palace 2 (12).webp"
 import fotosPalace2_13 from "@/assets/Fotos hotel/palace 2/palace 2 (13).webp"
+import fotosPalace2_14 from "@/assets/Fotos hotel/palace 2/palace 2 (14).webp"
+import fotosPalace2_15 from "@/assets/Fotos hotel/palace 2/palace 2 (15).webp"
+import fotosPalace2_16 from "@/assets/Fotos hotel/palace 2/palace 2 (16).webp"
+import fotosPalace2_17 from "@/assets/Fotos hotel/palace 2/palace 2 (17).webp"
+import fotosPalace2_18 from "@/assets/Fotos hotel/palace 2/palace 2 (18).webp"
+import fotosPalace2_19 from "@/assets/Fotos hotel/palace 2/palace 2 (19).webp"
+import fotosPalace2_20 from "@/assets/Fotos hotel/palace 2/palace 2 (20).webp"
+import fotosPalace2_21 from "@/assets/Fotos hotel/palace 2/palace 2 (21).webp"
+import fotosPalace2_22 from "@/assets/Fotos hotel/palace 2/palace 2 (22).webp"
+import fotosPalace2_23 from "@/assets/Fotos hotel/palace 2/palace 2 (23).webp"
+import fotosPalace2_24 from "@/assets/Fotos hotel/palace 2/palace 2 (24).webp"
+import fotosPalace2_25 from "@/assets/Fotos hotel/palace 2/palace 2 (25).webp"
+import fotosPalace2_26 from "@/assets/Fotos hotel/palace 2/palace 2 (26).webp"
+import fotosPalace2_27 from "@/assets/Fotos hotel/palace 2/palace 2 (27).webp"
+import fotosPalace2_28 from "@/assets/Fotos hotel/palace 2/palace 2 (28).webp"
+import fotosPalace2_29 from "@/assets/Fotos hotel/palace 2/palace 2 (29).webp"
+import fotosPalace2_30 from "@/assets/Fotos hotel/palace 2/palace 2 (30).webp"
+import fotosPalace2_31 from "@/assets/Fotos hotel/palace 2/palace 2 (31).webp"
 
 import fotosEconomy_1 from "@/assets/Fotos hotel/economy/economy (1).webp"
 import fotosEconomy_2 from "@/assets/Fotos hotel/economy/economy (2).webp"
@@ -62,6 +97,16 @@ import fotosExpress_4 from "@/assets/Fotos hotel/express/express (4).webp"
 import fotosExpress_5 from "@/assets/Fotos hotel/express/express (5).webp"
 import fotosExpress_6 from "@/assets/Fotos hotel/express/express (6).webp"
 import fotosExpress_7 from "@/assets/Fotos hotel/express/express (7).webp"
+import fotosExpress_8 from "@/assets/Fotos hotel/express/express (8).webp"
+import fotosExpress_9 from "@/assets/Fotos hotel/express/express (9).webp"
+import fotosExpress_10 from "@/assets/Fotos hotel/express/express (10).webp"
+import fotosExpress_11 from "@/assets/Fotos hotel/express/express (11).webp"
+import fotosExpress_12 from "@/assets/Fotos hotel/express/express (12).webp"
+import fotosExpress_13 from "@/assets/Fotos hotel/express/express (13).webp"
+import fotosExpress_14 from "@/assets/Fotos hotel/express/express (14).webp"
+import fotosExpress_15 from "@/assets/Fotos hotel/express/express (15).webp"
+import fotosExpress_16 from "@/assets/Fotos hotel/express/express (16).webp"
+import fotosExpress_17 from "@/assets/Fotos hotel/express/express (17).webp"
 
 
 
@@ -83,12 +128,13 @@ export const units: UnitData[] = [
   {
     slug: "havana-palace-i",
     name: "Havana Palace I",
-    tagline: "Conforto, tradicionalismo e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
+    tagline: "A Unidade Havana I é a primeira unidade da rede e se destaca por sua estrutura completa e funcional. Conta com 84 apartamentos amplos e confortáveis, um delicioso café da manhã e duas salas de convenções, preparados para atender com excelência as mais diversas demandas corporativas e de eventos.",
     description:
-      "Conforto, tradicionalismo e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
-    heroImage: fotosPalace1_19,
+      "A Unidade Havana I é a primeira unidade da rede e se destaca por sua estrutura completa e funcional. Conta com 84 apartamentos amplos e confortáveis, um delicioso café da manhã e duas salas de convenções, preparados para atender com excelência as mais diversas demandas corporativas e de eventos.",
+    heroImage: fotosPalace1_28,
     gallery: [
-      { src: fotosPalace1_19, alt: "Hotel" },
+      { src: fotosPalace1_1, alt: "Hotel" },
+      { src: fotosPalace1_2, alt: "Hotel" },
       { src: fotosPalace1_3, alt: "Hotel" },
       { src: fotosPalace1_4, alt: "Hotel" },
       { src: fotosPalace1_5, alt: "Hotel" },
@@ -105,31 +151,44 @@ export const units: UnitData[] = [
       { src: fotosPalace1_16, alt: "Hotel" },
       { src: fotosPalace1_17, alt: "Hotel" },
       { src: fotosPalace1_18, alt: "Hotel" },
-      { src: fotosPalace1_1, alt: "Hotel" },
-      { src: fotosPalace1_2, alt: "Hotel" },
-      
+      { src: fotosPalace1_19, alt: "Hotel" },
+      { src: fotosPalace1_20, alt: "Hotel" },
+      { src: fotosPalace1_21, alt: "Hotel" },
+      { src: fotosPalace1_22, alt: "Hotel" },
+      { src: fotosPalace1_23, alt: "Hotel" },
+      { src: fotosPalace1_24, alt: "Hotel" },
+      { src: fotosPalace1_25, alt: "Hotel" },
+      { src: fotosPalace1_26, alt: "Hotel" },
+      { src: fotosPalace1_27, alt: "Hotel" },
+      { src: fotosPalace1_28, alt: "Hotel" },
+      { src: fotosPalace1_29, alt: "Hotel" },
+      { src: fotosPalace1_30, alt: "Hotel" },
+      { src: fotosPalace1_31, alt: "Hotel" },
+      { src: fotosPalace1_32, alt: "Hotel" },
+      { src: fotosPalace1_33, alt: "Hotel" },
+      { src: fotosPalace1_34, alt: "Hotel" },
+      { src: fotosPalace1_35, alt: "Hotel" },
+      { src: fotosPalace1_36, alt: "Hotel" },
+
     ],
     amenities: [
-      "Wi-Fi de alta velocidade",
-      "Restaurante gourmet",
-      "Spa & Wellness",
-      "Centro de Convenções",
-      "Room Service 24h",
-      "Estacionamento privativo",
-      "Academia completa",
-      "Bar Lounge",
+      "Café da Manhã",
+      "Acesso à Internet",
+      "Academia",
+      "Sala de reunião",
+      "Estacionamento",
     ],
     address: "Rua Juiz de Fota,12, Av. Barão do Rio Branco, 985 - São Benedito. Uberaba - MG",
-    phone: "(92) 3000-0001",
+    phone: "(34) 3331-9600",
     email: "reservas@redehavana.com.br",
     mapUrl: "https://www.google.com.br/maps/place/Havana+Palace+Hotel+I/@-19.7634131,-47.9483148,17z/data=!4m18!1m9!3m8!1s0x94bad1893dbd1233:0xf36d6ebfdc121ea8!2sHavana+Palace+Hotel+I!5m2!4m1!1i2!8m2!3d-19.7634187!4d-47.9461264!3m7!1s0x94bad1893dbd1233:0xf36d6ebfdc121ea8!5m2!4m1!1i2!8m2!3d-19.7634187!4d-47.9461264",
   },
   {
     slug: "havana-palace-ii",
     name: "Havana Palace II",
-    tagline: "Construção arrojada, quartos confortáveis, restaurante com delicioso café da manhã e serviço de jantar e excelência no atendimento. Tudo isso com padrão Rede Havana de qualidade.",
+    tagline: "Oferecendo o melhor café da manhã da cidade, o Hotel Havana II se destaca como uma das unidades mais completas da rede. Nosso restaurante dispõe de um cardápio à la carte variado, com qualidade e cuidado em cada detalhe. Com sua estrutura ampla, serviços eficientes e atendimento preparado para grandes fluxos, é a escolha ideal para receber caravanas, grupos e excursões, proporcionando conforto, praticidade e uma experiência acima do padrão.",
     description:
-      "Construção arrojada, quartos confortáveis, restaurante com delicioso café da manhã e serviço de jantar e excelência no atendimento. Tudo isso com padrão Rede Havana de qualidade.",
+      "Oferecendo o melhor café da manhã da cidade, o Hotel Havana II se destaca como uma das unidades mais completas da rede. Nosso restaurante dispõe de um cardápio à la carte variado, com qualidade e cuidado em cada detalhe. Com sua estrutura ampla, serviços eficientes e atendimento preparado para grandes fluxos, é a escolha ideal para receber caravanas, grupos e excursões, proporcionando conforto, praticidade e uma experiência acima do padrão.",
     heroImage: fotosPalace2_13,
     gallery: [
       { src: fotosPalace2_1, alt: "Hotel" },
@@ -145,16 +204,32 @@ export const units: UnitData[] = [
       { src: fotosPalace2_11, alt: "Hotel" },
       { src: fotosPalace2_12, alt: "Hotel" },
       { src: fotosPalace2_13, alt: "Hotel" },
+      { src: fotosPalace2_14, alt: "Hotel" },
+      { src: fotosPalace2_15, alt: "Hotel" },
+      { src: fotosPalace2_16, alt: "Hotel" },
+      { src: fotosPalace2_17, alt: "Hotel" },
+      { src: fotosPalace2_18, alt: "Hotel" },
+      { src: fotosPalace2_19, alt: "Hotel" },
+      { src: fotosPalace2_20, alt: "Hotel" },
+      { src: fotosPalace2_21, alt: "Hotel" },
+      { src: fotosPalace2_22, alt: "Hotel" },
+      { src: fotosPalace2_23, alt: "Hotel" },
+      { src: fotosPalace2_24, alt: "Hotel" },
+      { src: fotosPalace2_25, alt: "Hotel" },
+      { src: fotosPalace2_26, alt: "Hotel" },
+      { src: fotosPalace2_27, alt: "Hotel" },
+      { src: fotosPalace2_28, alt: "Hotel" },
+      { src: fotosPalace2_29, alt: "Hotel" },
+      { src: fotosPalace2_30, alt: "Hotel" },
+      { src: fotosPalace2_31, alt: "Hotel" },
     ],
     amenities: [
-      "Wi-Fi de alta velocidade",
-      "Restaurante internacional",
-      "Piscina panorâmica",
-      "Salas de reunião",
-      "Room Service 24h",
-      "Estacionamento",
+      "Café da Manhã",
+      "Acesso à Internet",
+      "Sauna",
       "Academia",
-      "Lavanderia express",
+      "Estacionamento",
+      "Sala de jogos",
     ],
     address: "Av. Barão do Rio Branco, 338 - São Benedito. Uberaba - MG",
     phone: "(92) 3000-0002",
@@ -164,9 +239,9 @@ export const units: UnitData[] = [
   {
     slug: "havana-economy",
     name: "Havana Economy",
-    tagline: "Conforto, preços econômicos e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
+    tagline: "O Hotel é especializado em atender demandas econômicas, proporcionando uma estrutura com mais de 150 apartamentos.",
     description:
-      "Conforto, preços econômicos e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
+      "O Hotel é especializado em atender demandas econômicas, proporcionando uma estrutura com mais de 150 apartamentos.",
     heroImage: fotosEconomy_8,
     gallery: [
       { src: fotosEconomy_8, alt: "Hotel" },
@@ -179,25 +254,22 @@ export const units: UnitData[] = [
       { src: fotosEconomy_7, alt: "Hotel" },
     ],
     amenities: [
-      "Wi-Fi gratuito",
-      "Café da manhã incluso",
-      "Ar-condicionado",
-      "TV a cabo",
+      "Café da Manhã",
+      "Acesso à Internet",
       "Estacionamento",
-      "Recepção 24h",
     ],
     address: "R. Verissimo, 751 - São Benedito. Uberaba - MG",
-    phone: "(92) 3000-0003",
+    phone: "(34) 3319-9700",
     email: "reservas@redehavana.com.br",
     mapUrl: "https://www.google.com/maps/place/Havana+Economy/@-19.7609913,-47.9429447,17z/data=!3m1!4b1!4m9!3m8!1s0x94bad038c0781839:0x7eda735dace65877!5m2!4m1!1i2!8m2!3d-19.7609964!4d-47.9403698!16s%2Fg%2F11j0clmvm2?entry=tts&g_ep=EgoyMDI1MTAyMi4wIPu8ASoASAFQAw%3D%3D&skid=f08a7a06-25e2-416b-87b0-5b3e7e20c5dd",
   },
   {
     slug: "havana-express",
     name: "Havana Express",
-    tagline: "Conforto, delicioso café da manhã e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
+    tagline: "Situado próximo às margens da BR-050, o Hotel possui fácil acesso para quem vem de São Paulo e estado de Goiás, possuindo quartos amplos, confortáveis e um delicioso café da manhã.",
     description:
-      "Conforto, delicioso café da manhã e excelência em atendimento, tudo isso no padrão Rede Havana de qualidade.",
-    heroImage: fotosExpress_1,
+      "Situado próximo às margens da BR-050, o Hotel possui fácil acesso para quem vem de São Paulo e estado de Goiás, possuindo quartos amplos, confortáveis e um delicioso café da manhã.",
+    heroImage: fotosExpress_5,
     gallery: [
       { src: fotosExpress_1, alt: "Hotel" },
       { src: fotosExpress_2, alt: "Hotel" },
@@ -206,14 +278,21 @@ export const units: UnitData[] = [
       { src: fotosExpress_5, alt: "Hotel" },
       { src: fotosExpress_6, alt: "Hotel" },
       { src: fotosExpress_7, alt: "Hotel" },
+      { src: fotosExpress_8, alt: "Hotel" },
+      { src: fotosExpress_9, alt: "Hotel" },
+      { src: fotosExpress_10, alt: "Hotel" },
+      { src: fotosExpress_11, alt: "Hotel" },
+      { src: fotosExpress_12, alt: "Hotel" },
+      { src: fotosExpress_13, alt: "Hotel" },
+      { src: fotosExpress_14, alt: "Hotel" },
+      { src: fotosExpress_15, alt: "Hotel" },
+      { src: fotosExpress_16, alt: "Hotel" },
+      { src: fotosExpress_17, alt: "Hotel" },
     ],
     amenities: [
-      "Wi-Fi de alta velocidade",
-      "Check-in express",
-      "Quartos inteligentes",
-      "Café da manhã",
-      "Transfer aeroporto",
-      "Recepção 24h",
+      "Café da Manhã",
+      "Acesso à Internet",
+      "Estacionamento",
     ],
     address: "Av. das Toldas, 141 - Recreio dos Bandeirantes. Uberaba - MG",
     phone: "(92) 3000-0004",
