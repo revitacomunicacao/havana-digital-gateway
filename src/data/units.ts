@@ -39,15 +39,6 @@ import fotosPalace1_24 from "@/assets/Fotos hotel/palace 1/palace 1 (24).webp"
 import fotosPalace1_25 from "@/assets/Fotos hotel/palace 1/palace 1 (25).webp"
 import fotosPalace1_26 from "@/assets/Fotos hotel/palace 1/palace 1 (26).webp"
 import fotosPalace1_27 from "@/assets/Fotos hotel/palace 1/palace 1 (27).webp"
-import fotosPalace1_28 from "@/assets/Fotos hotel/palace 1/palace 1 (28).webp"
-import fotosPalace1_29 from "@/assets/Fotos hotel/palace 1/palace 1 (29).webp"
-import fotosPalace1_30 from "@/assets/Fotos hotel/palace 1/palace 1 (30).webp"
-import fotosPalace1_31 from "@/assets/Fotos hotel/palace 1/palace 1 (31).webp"
-import fotosPalace1_32 from "@/assets/Fotos hotel/palace 1/palace 1 (32).webp"
-import fotosPalace1_33 from "@/assets/Fotos hotel/palace 1/palace 1 (33).webp"
-import fotosPalace1_34 from "@/assets/Fotos hotel/palace 1/palace 1 (34).webp"
-import fotosPalace1_35 from "@/assets/Fotos hotel/palace 1/palace 1 (35).webp"
-import fotosPalace1_36 from "@/assets/Fotos hotel/palace 1/palace 1 (36).webp"
 
 import fotosPalace2_1 from "@/assets/Fotos hotel/palace 2/palace 2 (1).webp"
 import fotosPalace2_2 from "@/assets/Fotos hotel/palace 2/palace 2 (2).webp"
@@ -59,9 +50,7 @@ import fotosPalace2_7 from "@/assets/Fotos hotel/palace 2/palace 2 (7).webp"
 import fotosPalace2_8 from "@/assets/Fotos hotel/palace 2/palace 2 (8).webp"
 import fotosPalace2_9 from "@/assets/Fotos hotel/palace 2/palace 2 (9).webp"
 import fotosPalace2_10 from "@/assets/Fotos hotel/palace 2/palace 2 (10).webp"
-import fotosPalace2_11 from "@/assets/Fotos hotel/palace 2/palace 2 (11).webp"
 import fotosPalace2_12 from "@/assets/Fotos hotel/palace 2/palace 2 (12).webp"
-import fotosPalace2_13 from "@/assets/Fotos hotel/palace 2/palace 2 (13).webp"
 import fotosPalace2_14 from "@/assets/Fotos hotel/palace 2/palace 2 (14).webp"
 import fotosPalace2_15 from "@/assets/Fotos hotel/palace 2/palace 2 (15).webp"
 import fotosPalace2_16 from "@/assets/Fotos hotel/palace 2/palace 2 (16).webp"
@@ -69,22 +58,7 @@ import fotosPalace2_17 from "@/assets/Fotos hotel/palace 2/palace 2 (17).webp"
 import fotosPalace2_18 from "@/assets/Fotos hotel/palace 2/palace 2 (18).webp"
 import fotosPalace2_19 from "@/assets/Fotos hotel/palace 2/palace 2 (19).webp"
 import fotosPalace2_20 from "@/assets/Fotos hotel/palace 2/palace 2 (20).webp"
-import fotosPalace2_21 from "@/assets/Fotos hotel/palace 2/palace 2 (21).webp"
-import fotosPalace2_22 from "@/assets/Fotos hotel/palace 2/palace 2 (22).webp"
-import fotosPalace2_23 from "@/assets/Fotos hotel/palace 2/palace 2 (23).webp"
-import fotosPalace2_24 from "@/assets/Fotos hotel/palace 2/palace 2 (24).webp"
-import fotosPalace2_25 from "@/assets/Fotos hotel/palace 2/palace 2 (25).webp"
-import fotosPalace2_26 from "@/assets/Fotos hotel/palace 2/palace 2 (26).webp"
-import fotosPalace2_27 from "@/assets/Fotos hotel/palace 2/palace 2 (27).webp"
-import fotosPalace2_28 from "@/assets/Fotos hotel/palace 2/palace 2 (28).webp"
-import fotosPalace2_29 from "@/assets/Fotos hotel/palace 2/palace 2 (29).webp"
-import fotosPalace2_30 from "@/assets/Fotos hotel/palace 2/palace 2 (30).webp"
-import fotosPalace2_31 from "@/assets/Fotos hotel/palace 2/palace 2 (31).webp"
 
-import fotosEconomy_1 from "@/assets/Fotos hotel/economy/economy (1).webp"
-import fotosEconomy_2 from "@/assets/Fotos hotel/economy/economy (2).webp"
-import fotosEconomy_3 from "@/assets/Fotos hotel/economy/economy (3).webp"
-import fotosEconomy_4 from "@/assets/Fotos hotel/economy/economy (4).webp"
 import fotosEconomy_5 from "@/assets/Fotos hotel/economy/economy (5).webp"
 import fotosEconomy_6 from "@/assets/Fotos hotel/economy/economy (6).webp"
 import fotosEconomy_7 from "@/assets/Fotos hotel/economy/economy (7).webp"
@@ -155,7 +129,7 @@ export const units: UnitData[] = [
     tagline: "A Unidade Havana I é a primeira unidade da rede e se destaca por sua estrutura completa e funcional. Conta com 84 apartamentos amplos e confortáveis, um delicioso café da manhã e duas salas de convenções, preparados para atender com excelência as mais diversas demandas corporativas e de eventos.",
     description:
       "A Unidade Havana I é a primeira unidade da rede e se destaca por sua estrutura completa e funcional. Conta com 84 apartamentos amplos e confortáveis, um delicioso café da manhã e duas salas de convenções, preparados para atender com excelência as mais diversas demandas corporativas e de eventos.",
-    heroImage: fotosPalace1_28,
+    heroImage: fotosPalace1_27,
     gallery: [
       { src: fotosPalace1_1, alt: "Hotel" },
       { src: fotosPalace1_2, alt: "Hotel" },
@@ -184,15 +158,6 @@ export const units: UnitData[] = [
       { src: fotosPalace1_25, alt: "Hotel" },
       { src: fotosPalace1_26, alt: "Hotel" },
       { src: fotosPalace1_27, alt: "Hotel" },
-      { src: fotosPalace1_28, alt: "Hotel" },
-      { src: fotosPalace1_29, alt: "Hotel" },
-      { src: fotosPalace1_30, alt: "Hotel" },
-      { src: fotosPalace1_31, alt: "Hotel" },
-      { src: fotosPalace1_32, alt: "Hotel" },
-      { src: fotosPalace1_33, alt: "Hotel" },
-      { src: fotosPalace1_34, alt: "Hotel" },
-      { src: fotosPalace1_35, alt: "Hotel" },
-      { src: fotosPalace1_36, alt: "Hotel" },
 
     ],
     amenities: [
@@ -213,7 +178,7 @@ export const units: UnitData[] = [
     tagline: "Oferecendo o melhor café da manhã da cidade, o Hotel Havana II se destaca como uma das unidades mais completas da rede. Nosso restaurante dispõe de um cardápio à la carte variado, com qualidade e cuidado em cada detalhe. Com sua estrutura ampla, serviços eficientes e atendimento preparado para grandes fluxos, é a escolha ideal para receber caravanas, grupos e excursões, proporcionando conforto, praticidade e uma experiência acima do padrão.",
     description:
       "Oferecendo o melhor café da manhã da cidade, o Hotel Havana II se destaca como uma das unidades mais completas da rede. Nosso restaurante dispõe de um cardápio à la carte variado, com qualidade e cuidado em cada detalhe. Com sua estrutura ampla, serviços eficientes e atendimento preparado para grandes fluxos, é a escolha ideal para receber caravanas, grupos e excursões, proporcionando conforto, praticidade e uma experiência acima do padrão.",
-    heroImage: fotosPalace2_13,
+    heroImage: fotosPalace2_12,
     gallery: [
       { src: fotosPalace2_1, alt: "Hotel" },
       { src: fotosPalace2_2, alt: "Hotel" },
@@ -225,9 +190,7 @@ export const units: UnitData[] = [
       { src: fotosPalace2_8, alt: "Hotel" },
       { src: fotosPalace2_9, alt: "Hotel" },
       { src: fotosPalace2_10, alt: "Hotel" },
-      { src: fotosPalace2_11, alt: "Hotel" },
       { src: fotosPalace2_12, alt: "Hotel" },
-      { src: fotosPalace2_13, alt: "Hotel" },
       { src: fotosPalace2_14, alt: "Hotel" },
       { src: fotosPalace2_15, alt: "Hotel" },
       { src: fotosPalace2_16, alt: "Hotel" },
@@ -235,17 +198,6 @@ export const units: UnitData[] = [
       { src: fotosPalace2_18, alt: "Hotel" },
       { src: fotosPalace2_19, alt: "Hotel" },
       { src: fotosPalace2_20, alt: "Hotel" },
-      { src: fotosPalace2_21, alt: "Hotel" },
-      { src: fotosPalace2_22, alt: "Hotel" },
-      { src: fotosPalace2_23, alt: "Hotel" },
-      { src: fotosPalace2_24, alt: "Hotel" },
-      { src: fotosPalace2_25, alt: "Hotel" },
-      { src: fotosPalace2_26, alt: "Hotel" },
-      { src: fotosPalace2_27, alt: "Hotel" },
-      { src: fotosPalace2_28, alt: "Hotel" },
-      { src: fotosPalace2_29, alt: "Hotel" },
-      { src: fotosPalace2_30, alt: "Hotel" },
-      { src: fotosPalace2_31, alt: "Hotel" },
     ],
     amenities: [
       "Café da Manhã",
@@ -268,10 +220,6 @@ export const units: UnitData[] = [
       "O Hotel é especializado em atender demandas econômicas, proporcionando uma estrutura com mais de 150 apartamentos.",
     heroImage: fotosEconomy_31,
     gallery: [
-      { src: fotosEconomy_1, alt: "Hotel" },
-      { src: fotosEconomy_2, alt: "Hotel" },
-      { src: fotosEconomy_3, alt: "Hotel" },
-      { src: fotosEconomy_4, alt: "Hotel" },
       { src: fotosEconomy_5, alt: "Hotel" },
       { src: fotosEconomy_6, alt: "Hotel" },
       { src: fotosEconomy_7, alt: "Hotel" },
