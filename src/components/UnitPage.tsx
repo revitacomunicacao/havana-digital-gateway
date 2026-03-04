@@ -106,9 +106,44 @@ const UnitPage = ({ unit }: UnitPageProps) => {
         </div>
       </section>
 
+      {/* Gallery */}
+      <section className="py-20 bg-background">
+        <div className="container">
+          <div className="text-center mb-12">
+            <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
+              Galeria
+            </span>
+            <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-primary">
+              Conheça os espaços
+            </h2>
+            <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {unit.gallery.map((img, i) => (
+              <button
+                key={i}
+                onClick={() => openLightbox(i)}
+                className="relative aspect-[4/3] overflow-hidden group cursor-pointer"
+              >
+                <img
+                  src={img.src}
+                  alt={img.alt}
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/30 transition-colors duration-500 flex items-center justify-center">
+                  <span className="text-primary-foreground font-body text-sm uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    {img.alt}
+                  </span>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Room Types Table */}
       {rooms.length > 0 && (
-        <section className="py-20 bg-background">
+        <section className="py-20 bg-muted">
           <div className="container">
             <div className="text-center mb-12">
               <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
@@ -168,7 +203,7 @@ const UnitPage = ({ unit }: UnitPageProps) => {
       )}
 
       {/* Amenities */}
-      <section className="py-20 bg-muted">
+      <section className="py-20 bg-background">
         <div className="container">
           <div className="text-center mb-12">
             <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
@@ -183,46 +218,11 @@ const UnitPage = ({ unit }: UnitPageProps) => {
             {unit.amenities.map((amenity) => (
               <div
                 key={amenity}
-                className="flex flex-col items-center gap-3 p-6 border border-border hover:border-secondary/40 transition-colors duration-300 bg-background"
+                className="flex flex-col items-center gap-3 p-6 border border-border hover:border-secondary/40 transition-colors duration-300 bg-muted"
               >
                 <span className="text-secondary">{getIcon(amenity)}</span>
                 <span className="text-foreground font-body text-sm text-center">{amenity}</span>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="py-20 bg-background">
-        <div className="container">
-          <div className="text-center mb-12">
-            <span className="text-secondary font-body text-sm uppercase tracking-[0.3em]">
-              Galeria
-            </span>
-            <h2 className="mt-4 font-display text-3xl md:text-4xl font-semibold text-primary">
-              Conheça os espaços
-            </h2>
-            <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
-          </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {unit.gallery.map((img, i) => (
-              <button
-                key={i}
-                onClick={() => openLightbox(i)}
-                className="relative aspect-[4/3] overflow-hidden group cursor-pointer"
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-                <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/30 transition-colors duration-500 flex items-center justify-center">
-                  <span className="text-primary-foreground font-body text-sm uppercase tracking-wider opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    {img.alt}
-                  </span>
-                </div>
-              </button>
             ))}
           </div>
         </div>
