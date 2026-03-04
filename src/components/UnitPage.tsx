@@ -20,28 +20,28 @@ const getIcon = (amenity: string) => {
 };
 
 // Room types per unit
-const roomTypes: Record<string, { tipo: string; preco: string; diferenciais: string[] }[]> = {
+const roomTypes: Record<string, { tipo: string; preco: string; diferenciais: string[]; imageIndex: number }[]> = {
   "havana-palace-i": [
-    { tipo: "Apartamento Luxo Individual", preco: "R$ 234,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 262,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro","Piso frio","Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Triplo", preco: "R$ 324,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Quadrúplo", preco: "R$ 362,00", diferenciais: ["1 camas de casal e duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"] },
+    { tipo: "Apartamento Luxo Individual", preco: "R$ 234,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"], imageIndex: 0 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 262,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro","Piso frio","Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 1 },
+    { tipo: "Apartamento Luxo Triplo", preco: "R$ 324,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 2 },
+    { tipo: "Apartamento Quadrúplo", preco: "R$ 362,00", diferenciais: ["1 camas de casal e duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 3 },
   ],
   "havana-palace-ii": [
-    { tipo: "Apartamento Luxo Individual", preco: "R$ 249,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 288,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Triplo", preco: "R$ 372,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Quadruplo", preco: "R$ 409,00", diferenciais: ["1 camas de casal e duas camas de solteiro ou 4 camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"] },
+    { tipo: "Apartamento Luxo Individual", preco: "R$ 249,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"], imageIndex: 0 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 288,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 1 },
+    { tipo: "Apartamento Luxo Triplo", preco: "R$ 372,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 2 },
+    { tipo: "Apartamento Luxo Quadruplo", preco: "R$ 409,00", diferenciais: ["1 camas de casal e duas camas de solteiro ou 4 camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 3 },
   ],
   "havana-economy": [
-    { tipo: "Apartamento Luxo Individual", preco: "R$ 143,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar","Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 200,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo","Banheiro privativo com ducha regulável"] },
+    { tipo: "Apartamento Luxo Individual", preco: "R$ 143,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar","Banheiro privativo com ducha regulável"], imageIndex: 0 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 200,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo","Banheiro privativo com ducha regulável"], imageIndex: 1 },
   ],
   "havana-express": [
-    { tipo: "Apartamento Luxo Individual", preco: "R$ 240,00", diferenciais: ["Cama de casal", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 270,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Triplo", preco: "R$ 330,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"] },
-    { tipo: "Apartamento Luxo Quadruplo Casal", preco: "R$ 368,00", diferenciais: ["1 camas de casal e duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"] },
+    { tipo: "Apartamento Luxo Individual", preco: "R$ 240,00", diferenciais: ["Cama de casal", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 0 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 270,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 1 },
+    { tipo: "Apartamento Luxo Triplo", preco: "R$ 330,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 2 },
+    { tipo: "Apartamento Luxo Quadruplo Casal", preco: "R$ 368,00", diferenciais: ["1 camas de casal e duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 3 },
   ],
 };
 
@@ -119,33 +119,49 @@ const UnitPage = ({ unit }: UnitPageProps) => {
               </h2>
               <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
             </div>
-            <div className="max-w-6xl mx-auto overflow-x-auto">
-              <table className="w-full border-collapse">
-                <thead>
-                  <tr className="border-b-2 border-secondary/30">
-                    <th className="text-left py-4 px-6 font-display text-sm uppercase tracking-wider text-primary">Tipo de Quarto</th>
-                    <th className="text-left py-4 px-6 font-display text-sm uppercase tracking-wider text-primary">Preço da diária</th>
-                    <th className="text-left py-4 px-6 font-display text-sm uppercase tracking-wider text-primary">Diferenciais</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {rooms.map((room) => (
-                    <tr key={room.tipo} className="border-b border-border hover:bg-muted/50 transition-colors">
-                      <td className="py-5 px-6 font-display text-base font-semibold text-primary">{room.tipo}</td>
-                      <td className="py-5 px-4 font-body text-sm text-muted-foreground">{room.preco}</td>
-                      <td className="py-5 px-6">
-                        <div className="flex flex-wrap gap-2">
-                          {room.diferenciais.map((d) => (
-                            <span key={d} className="inline-block bg-muted text-muted-foreground font-body text-xs px-3 py-1 border border-border">
-                              {d}
-                            </span>
-                          ))}
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+            <div className="max-w-4xl mx-auto flex flex-col gap-6">
+              {rooms.map((room) => {
+                const roomImage = unit.gallery[room.imageIndex % unit.gallery.length]?.src;
+                return (
+                  <div
+                    key={room.tipo}
+                    className="border border-border rounded-lg overflow-hidden bg-card flex flex-col md:flex-row"
+                  >
+                    {/* Image */}
+                    <div className="relative w-full md:w-64 h-48 md:h-auto flex-shrink-0">
+                      <img
+                        src={roomImage}
+                        alt={room.tipo}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    {/* Info */}
+                    <div className="flex-1 p-5 md:p-6 flex flex-col gap-3">
+                      <h3 className="font-display text-lg font-semibold text-primary">
+                        {room.tipo}
+                      </h3>
+                      <div className="flex flex-wrap gap-1.5">
+                        {room.diferenciais.map((d) => (
+                          <span
+                            key={d}
+                            className="inline-block bg-muted text-muted-foreground font-body text-xs px-3 py-1 rounded-full border border-border"
+                          >
+                            {d}
+                          </span>
+                        ))}
+                      </div>
+                      <div className="mt-auto pt-3 border-t border-border">
+                        <span className="text-secondary font-display text-xl font-bold">
+                          {room.preco}
+                        </span>
+                        <span className="text-muted-foreground font-body text-xs ml-2">
+                          / diária
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
             </div>
           </div>
         </section>
