@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import palace1 from "@/assets/Fotos hotel/palace 1/palace 1 (19).webp";
-import palace2 from "@/assets/Fotos hotel/palace 2/palace 2 (13).webp";
-import economy from "@/assets/Fotos hotel/economy/economy (8).webp";
-import express from "@/assets/Fotos hotel/express/express (1).webp";
+import palace1 from "@/assets/Fotos hotel/palace 1/palace 1 (27).webp";
+import palace2 from "@/assets/Fotos hotel/palace 2/palace 2 (12).webp";
+import economy from "@/assets/Fotos hotel/economy/economy (31).webp";
+import express from "@/assets/Fotos hotel/express/express (5).webp";
 import novaUnidadeHero from "@/assets/nova-unidade-hero.jpg";
 
 const units = [
