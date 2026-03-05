@@ -22,26 +22,26 @@ const getIcon = (amenity: string) => {
 // Room types per unit
 const roomTypes: Record<string, { tipo: string; preco: string; diferenciais: string[]; imageIndex: number }[]> = {
   "havana-palace-i": [
-    { tipo: "Apartamento Luxo Individual", preco: "R$ 234,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"], imageIndex: 0 },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 262,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro","Piso frio","Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 1 },
-    { tipo: "Apartamento Luxo Triplo", preco: "R$ 324,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 2 },
+    { tipo: "Apartamento Luxo Individual", preco: "R$ 234,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"], imageIndex: 19 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 262,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro","Piso frio","Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 19 },
+    { tipo: "Apartamento Luxo Triplo", preco: "R$ 324,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 18 },
     { tipo: "Apartamento Quadrúplo", preco: "R$ 362,00", diferenciais: ["1 camas de casal e duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 3 },
   ],
   "havana-palace-ii": [
-    { tipo: "Apartamento Luxo Individual", preco: "R$ 249,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"], imageIndex: 0 },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 288,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 1 },
-    { tipo: "Apartamento Luxo Triplo", preco: "R$ 372,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 2 },
-    { tipo: "Apartamento Luxo Quadruplo", preco: "R$ 409,00", diferenciais: ["1 camas de casal e duas camas de solteiro ou 4 camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 3 },
+    { tipo: "Apartamento Luxo Individual", preco: "R$ 249,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar", "Banheiro privativo com ducha regulável"], imageIndex: 16 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 288,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 16 },
+    { tipo: "Apartamento Luxo Triplo", preco: "R$ 372,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 16 },
+    { tipo: "Apartamento Luxo Quadruplo", preco: "R$ 409,00", diferenciais: ["1 camas de casal e duas camas de solteiro ou 4 camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo", "Banheiro privativo com ducha regulável"], imageIndex: 16 },
   ],
   "havana-economy": [
     { tipo: "Apartamento Luxo Individual", preco: "R$ 143,00", diferenciais: ["Cama de casal", "Piso frio", "Ar condicionado", "Tv a cabo", "Frigobar","Banheiro privativo com ducha regulável"], imageIndex: 0 },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 200,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo","Banheiro privativo com ducha regulável"], imageIndex: 1 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 200,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar condicionado", "Frigobar", "Tv a cabo","Banheiro privativo com ducha regulável"], imageIndex: 6 },
   ],
   "havana-express": [
-    { tipo: "Apartamento Luxo Individual", preco: "R$ 240,00", diferenciais: ["Cama de casal", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 0 },
-    { tipo: "Apartamento Luxo Duplo", preco: "R$ 270,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 1 },
+    { tipo: "Apartamento Luxo Individual", preco: "R$ 240,00", diferenciais: ["Cama de casal", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 2 },
+    { tipo: "Apartamento Luxo Duplo", preco: "R$ 270,00", diferenciais: ["Uma cama de casal ou duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 2 },
     { tipo: "Apartamento Luxo Triplo", preco: "R$ 330,00", diferenciais: ["3 camas de solteiro ou uma cama de casal e uma cama de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 2 },
-    { tipo: "Apartamento Luxo Quadruplo Casal", preco: "R$ 368,00", diferenciais: ["1 camas de casal e duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 3 },
+    { tipo: "Apartamento Luxo Quadruplo Casal", preco: "R$ 368,00", diferenciais: ["1 camas de casal e duas camas de solteiro", "Piso frio", "Ar Condicionado", "Tv a cabo", "Adega(resfria)","Banheiro privativo com ducha regulável"], imageIndex: 2 },
   ],
 };
 
