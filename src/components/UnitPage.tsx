@@ -52,29 +52,43 @@ interface UnitPageProps {
 const UnitPage = ({ unit }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
+  const cleanupBookingEngine = () => {
+    document.getElementById("hbook-search")?.replaceChildren();
+    document.getElementById("hbook-booking-script")?.remove();
+
+    document
+      .querySelectorAll(
+        'iframe[src*="hbook"], iframe[id*="hbook"], [id*="hbook-widget"], [class*="hbook"], script[src*="hbook-universal-js"], link[href*="hbook"]',
+      )
+      .forEach((element) => {
+        if (element.id !== "hbook-search") {
+          element.remove();
+        }
+      });
+
+    const bookingWindow = window as Window & { hbook?: unknown; HBook?: unknown };
+    bookingWindow.hbook = undefined;
+    bookingWindow.HBook = undefined;
+  };
+
   // Load booking script for Palace I only
   useEffect(() => {
-    if (unit.slug === "havana-palace-i") {
-      const script = document.createElement("script");
-      script.id = "hbook-booking-script";
-      script.src =
-        "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js";
-      script.async = true;
-      document.body.appendChild(script);
-      
-      return () => {
-        const existingScript = document.getElementById("hbook-booking-script");
-        if (existingScript) {
-          existingScript.remove();
-        }
-      };
-    } else {
-      // Remove booking script if navigating away from Palace I
-      const existingScript = document.getElementById("hbook-booking-script");
-      if (existingScript) {
-        existingScript.remove();
-      }
+    cleanupBookingEngine();
+
+    if (unit.slug !== "havana-palace-i") {
+      return;
     }
+
+    const script = document.createElement("script");
+    script.id = "hbook-booking-script";
+    script.src =
+      "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      cleanupBookingEngine();
+    };
   }, [unit.slug]);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
