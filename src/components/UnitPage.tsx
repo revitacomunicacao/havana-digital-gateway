@@ -153,7 +153,27 @@ const UnitPage = ({ unit }: UnitPageProps) => {
       {/* Booking Engine - Palace I */}
       {unit.slug === "havana-palace-i" && (
         <section className="py-20 bg-background">
-          <div id="hbook-search" />
+          <iframe
+            key={bookingKey}
+            srcDoc={`<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;font-family:sans-serif}</style></head><body><div id="hbook-search"></div><script async src="https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js"><\/script></body></html>`}
+            className="w-full border-0"
+            style={{ minHeight: "500px" }}
+            title="Motor de Reservas"
+            onLoad={(e) => {
+              const iframe = e.currentTarget;
+              const resizeObserver = new ResizeObserver(() => {
+                try {
+                  const height = iframe.contentDocument?.body?.scrollHeight;
+                  if (height) iframe.style.height = height + "px";
+                } catch (_) {}
+              });
+              try {
+                if (iframe.contentDocument?.body) {
+                  resizeObserver.observe(iframe.contentDocument.body);
+                }
+              } catch (_) {}
+            }}
+          />
         </section>
       )}
 
