@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Phone, Mail, MapPin, Wifi, Coffee, Dumbbell, Car, Clock, ChevronLeft, ChevronRight, X, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
@@ -51,6 +51,20 @@ interface UnitPageProps {
 
 const UnitPage = ({ unit }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
+
+  // Load booking script for Palace I
+  useEffect(() => {
+    if (unit.slug === "havana-palace-i") {
+      const script = document.createElement("script");
+      script.src =
+        "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js";
+      script.async = true;
+      document.body.appendChild(script);
+      return () => {
+        document.body.removeChild(script);
+      };
+    }
+  }, [unit.slug]);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
@@ -140,6 +154,13 @@ const UnitPage = ({ unit }: UnitPageProps) => {
           </div>
         </div>
       </section>
+
+      {/* Booking Engine - Palace I */}
+      {unit.slug === "havana-palace-i" && (
+        <section className="py-20 bg-background">
+          <div id="hbook-search" />
+        </section>
+      )}
 
       {/* Room Types Table */}
       {rooms.length > 0 && (
