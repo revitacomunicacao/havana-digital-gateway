@@ -52,46 +52,13 @@ interface UnitPageProps {
 const UnitPage = ({ unit }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const cleanupBookingEngine = () => {
-    document.getElementById("hbook-search")?.replaceChildren();
-    document.getElementById("hbook-booking-script")?.remove();
+  const [bookingKey, setBookingKey] = useState(0);
 
-    document
-      .querySelectorAll(
-        'iframe[src*="hbook"], iframe[id*="hbook"], [id*="hbook-widget"], [class*="hbook"], script[src*="hbook-universal-js"], link[href*="hbook"]',
-      )
-      .forEach((element) => {
-        if (element.id !== "hbook-search") {
-          element.remove();
-        }
-      });
-
-    const bookingWindow = window as Window & { hbook?: unknown; HBook?: unknown };
-    bookingWindow.hbook = undefined;
-    bookingWindow.HBook = undefined;
-  };
-
-  // Load booking script for Palace I only
+  // Force remount of booking iframe when navigating to Palace I
   useEffect(() => {
-    cleanupBookingEngine();
-
-    if (unit.slug !== "havana-palace-i") {
-      return;
+    if (unit.slug === "havana-palace-i") {
+      setBookingKey((k) => k + 1);
     }
-
-    const script = document.createElement("script");
-    script.id = "hbook-booking-script";
-    script.src =
-      "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js?t=" + Date.now();
-    script.async = true;
-    script.onload = () => {
-      window.dispatchEvent(new Event("load"));
-    };
-    document.body.appendChild(script);
-
-    return () => {
-      cleanupBookingEngine();
-    };
   }, [unit.slug]);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
@@ -186,7 +153,27 @@ const UnitPage = ({ unit }: UnitPageProps) => {
       {/* Booking Engine - Palace I */}
       {unit.slug === "havana-palace-i" && (
         <section className="py-20 bg-background">
-          <div id="hbook-search" />
+          <iframe
+            key={bookingKey}
+            srcDoc={`<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;font-family:sans-serif}</style></head><body><div id="hbook-search"></div><script async src="https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js"><\/script></body></html>`}
+            className="w-full border-0"
+            style={{ minHeight: "500px" }}
+            title="Motor de Reservas"
+            onLoad={(e) => {
+              const iframe = e.currentTarget;
+              const resizeObserver = new ResizeObserver(() => {
+                try {
+                  const height = iframe.contentDocument?.body?.scrollHeight;
+                  if (height) iframe.style.height = height + "px";
+                } catch (_) {}
+              });
+              try {
+                if (iframe.contentDocument?.body) {
+                  resizeObserver.observe(iframe.contentDocument.body);
+                }
+              } catch (_) {}
+            }}
+          />
         </section>
       )}
 
