@@ -155,6 +155,13 @@ const UnitPage = ({ unit }: UnitPageProps) => {
         </div>
       </section>
 
+      {/* Booking Engine - Palace I */}
+      {unit.slug === "havana-palace-i" && (
+        <section className="py-20 bg-background">
+          <div id="hbook-search" />
+        </section>
+      )}
+
       {/* Room Types Table */}
       {rooms.length > 0 && (
         <section className="py-20 bg-muted">
