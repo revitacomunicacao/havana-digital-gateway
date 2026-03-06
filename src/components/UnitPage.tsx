@@ -82,7 +82,7 @@ const UnitPage = ({ unit }: UnitPageProps) => {
     const script = document.createElement("script");
     script.id = "hbook-booking-script";
     script.src =
-      "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js";
+      "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js?t=" + Date.now();
     script.async = true;
     document.body.appendChild(script);
 
