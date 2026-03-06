@@ -52,17 +52,28 @@ interface UnitPageProps {
 const UnitPage = ({ unit }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  // Load booking script for Palace I
+  // Load booking script for Palace I only
   useEffect(() => {
     if (unit.slug === "havana-palace-i") {
       const script = document.createElement("script");
+      script.id = "hbook-booking-script";
       script.src =
         "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js";
       script.async = true;
       document.body.appendChild(script);
+      
       return () => {
-        document.body.removeChild(script);
+        const existingScript = document.getElementById("hbook-booking-script");
+        if (existingScript) {
+          existingScript.remove();
+        }
       };
+    } else {
+      // Remove booking script if navigating away from Palace I
+      const existingScript = document.getElementById("hbook-booking-script");
+      if (existingScript) {
+        existingScript.remove();
+      }
     }
   }, [unit.slug]);
 
