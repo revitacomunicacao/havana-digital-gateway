@@ -84,6 +84,9 @@ const UnitPage = ({ unit }: UnitPageProps) => {
     script.src =
       "https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js?t=" + Date.now();
     script.async = true;
+    script.onload = () => {
+      window.dispatchEvent(new Event("load"));
+    };
     document.body.appendChild(script);
 
     return () => {
