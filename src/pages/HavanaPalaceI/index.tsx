@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import UnitPage from "@/components/UnitPage";
+import HbookBookingEngine from "@/components/HbookBookingEngine";
 import type { UnitData } from "@/data/units";
 
 import fotosPalace1_1 from "@/assets/Fotos hotel/palace 1/palace 1 (1).webp";
@@ -84,7 +85,7 @@ const HavanaPalaceI = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return <UnitPage unit={unitData} rooms={roomTypes} />;
+  return <UnitPage unit={unitData} rooms={roomTypes} afterGallery={<HbookBookingEngine />} />;
 };
 
 export default HavanaPalaceI;

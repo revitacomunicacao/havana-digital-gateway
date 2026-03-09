@@ -55,9 +55,10 @@ export interface RoomType {
 interface UnitPageProps {
   unit: UnitData;
   rooms?: RoomType[];
+  afterGallery?: React.ReactNode;
 }
 
-const UnitPage = ({ unit, rooms: roomsProp }: UnitPageProps) => {
+const UnitPage = ({ unit, rooms: roomsProp, afterGallery }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
@@ -148,6 +149,8 @@ const UnitPage = ({ unit, rooms: roomsProp }: UnitPageProps) => {
           </div>
         </div>
       </section>
+
+      {afterGallery}
 
       {/* Room Types Table */}
       {rooms.length > 0 && (
