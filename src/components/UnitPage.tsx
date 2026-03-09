@@ -56,6 +56,7 @@ interface UnitPageProps {
   unit: UnitData;
   rooms?: RoomType[];
   afterGallery?: React.ReactNode;
+  beforeAbout?: React.ReactNode;
 }
 
 const UnitPage = ({ unit, rooms: roomsProp, afterGallery }: UnitPageProps) => {
