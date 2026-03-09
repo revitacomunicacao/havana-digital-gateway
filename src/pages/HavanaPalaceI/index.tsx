@@ -85,7 +85,7 @@ const HavanaPalaceI = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return <UnitPage unit={unitData} rooms={roomTypes} afterGallery={<HbookBookingEngine />} />;
+  return <UnitPage unit={unitData} rooms={roomTypes} beforeAbout={<HbookBookingEngine />} />;
 };
 
 export default HavanaPalaceI;

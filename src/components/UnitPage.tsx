@@ -100,6 +100,8 @@ const UnitPage = ({ unit, rooms: roomsProp, afterGallery, beforeAbout }: UnitPag
         </div>
       </section>
 
+      {beforeAbout}
+
       {/* About */}
       <section className="py-20 bg-muted">
         <div className="container max-w-3xl text-center">
