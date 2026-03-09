@@ -56,9 +56,10 @@ interface UnitPageProps {
   unit: UnitData;
   rooms?: RoomType[];
   afterGallery?: React.ReactNode;
+  beforeAbout?: React.ReactNode;
 }
 
-const UnitPage = ({ unit, rooms: roomsProp, afterGallery }: UnitPageProps) => {
+const UnitPage = ({ unit, rooms: roomsProp, afterGallery, beforeAbout }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
@@ -98,6 +99,8 @@ const UnitPage = ({ unit, rooms: roomsProp, afterGallery }: UnitPageProps) => {
           </div>
         </div>
       </section>
+
+      {beforeAbout}
 
       {/* About */}
       <section className="py-20 bg-muted">
