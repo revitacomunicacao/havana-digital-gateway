@@ -45,11 +45,19 @@ const roomTypes: Record<string, { tipo: string; preco: string; diferenciais: str
   ],
 };
 
-interface UnitPageProps {
-  unit: UnitData;
+export interface RoomType {
+  tipo: string;
+  preco: string;
+  diferenciais: string[];
+  imageIndex: number;
 }
 
-const UnitPage = ({ unit }: UnitPageProps) => {
+interface UnitPageProps {
+  unit: UnitData;
+  rooms?: RoomType[];
+}
+
+const UnitPage = ({ unit, rooms: roomsProp }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
@@ -59,7 +67,7 @@ const UnitPage = ({ unit }: UnitPageProps) => {
   const nextImage = () =>
     setLightboxIndex((i) => (i !== null ? (i + 1) % unit.gallery.length : null));
 
-  const rooms = roomTypes[unit.slug] || [];
+  const rooms = roomsProp || roomTypes[unit.slug] || [];
 
   return (
     <div className="min-h-screen">
