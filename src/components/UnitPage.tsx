@@ -150,6 +150,8 @@ const UnitPage = ({ unit, rooms: roomsProp, afterGallery }: UnitPageProps) => {
         </div>
       </section>
 
+      {afterGallery}
+
       {/* Room Types Table */}
       {rooms.length > 0 && (
         <section className="py-20 bg-muted">
