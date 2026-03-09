@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft, Phone, Mail, MapPin, Wifi, Coffee, Dumbbell, Car, Clock, ChevronLeft, ChevronRight, X, ExternalLink } from "lucide-react";
 import Header from "@/components/Header";
@@ -51,15 +51,6 @@ interface UnitPageProps {
 
 const UnitPage = ({ unit }: UnitPageProps) => {
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
-
-  const [bookingKey, setBookingKey] = useState(0);
-
-  // Force remount of booking iframe when navigating to Palace I
-  useEffect(() => {
-    if (unit.slug === "havana-palace-i") {
-      setBookingKey((k) => k + 1);
-    }
-  }, [unit.slug]);
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
@@ -149,33 +140,6 @@ const UnitPage = ({ unit }: UnitPageProps) => {
           </div>
         </div>
       </section>
-
-      {/* Booking Engine - Palace I */}
-      {unit.slug === "havana-palace-i" && (
-        <section className="py-20 bg-background">
-          <iframe
-            key={bookingKey}
-            srcDoc={`<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{margin:0;font-family:sans-serif}</style></head><body><div id="hbook-search"></div><script async src="https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js"><\/script></body></html>`}
-            className="w-full border-0"
-            style={{ minHeight: "500px" }}
-            title="Motor de Reservas"
-            onLoad={(e) => {
-              const iframe = e.currentTarget;
-              const resizeObserver = new ResizeObserver(() => {
-                try {
-                  const height = iframe.contentDocument?.body?.scrollHeight;
-                  if (height) iframe.style.height = height + "px";
-                } catch (_) {}
-              });
-              try {
-                if (iframe.contentDocument?.body) {
-                  resizeObserver.observe(iframe.contentDocument.body);
-                }
-              } catch (_) {}
-            }}
-          />
-        </section>
-      )}
 
       {/* Room Types Table */}
       {rooms.length > 0 && (
