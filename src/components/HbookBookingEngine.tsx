@@ -19,9 +19,9 @@ const HbookBookingEngine = ({ scriptSrc = DEFAULT_SCRIPT_SRC, title }: HbookBook
           <div className="mt-4 w-16 h-0.5 bg-secondary mx-auto" />
         </div>
         <iframe
-          srcDoc={`<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;padding:0;font-family:sans-serif}#hbook-search{margin:0;padding:0}</style></head><body><div id="hbook-search"></div><script async src="${scriptSrc}"></script></body></html>`}
+          srcDoc={`<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><style>html,body{margin:0;padding:0;font-family:sans-serif}#hbook-search{margin:0;padding:0}</style></head><body><div id="hbook-search"></div><script async src='${scriptSrc}'></script></body></html>`}
           className="w-full border-0"
-          style={{ height: 130 }}
+          style={{ minHeight: 130 }}
           title={title ?? "Motor de Reservas Havana"}
           onLoad={(e) => {
             const iframe = e.currentTarget;
