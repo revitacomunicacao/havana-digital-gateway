@@ -85,7 +85,18 @@ const HavanaPalaceI = () => {
     window.scrollTo(0, 0);
   }, []);
 
-  return <UnitPage unit={unitData} rooms={roomTypes} beforeAbout={<HbookBookingEngine />} />;
+  return (
+    <UnitPage
+      unit={unitData}
+      rooms={roomTypes}
+      beforeAbout={
+        <HbookBookingEngine
+          scriptSrc="https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/696645dcd22abe32731566c6.js"
+          title="Motor de Reservas Havana Palace I"
+        />
+      }
+    />
+  );
 };
 
 export default HavanaPalaceI;
