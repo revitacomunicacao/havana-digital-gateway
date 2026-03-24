@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import UnitPage from "@/components/UnitPage";
-import HbookBookingEngine from "@/components/HbookBookingEngine";
+import HbookBookingInline from "@/components/HbookBookingInline";
 import type { UnitData } from "@/data/units";
 
 import fotosPalace2_1 from "@/assets/Fotos hotel/palace 2/palace 2 (1).webp";
@@ -72,9 +72,8 @@ const HavanaPalaceII = () => {
       unit={unitData}
       rooms={roomTypes}
       beforeAbout={
-        <HbookBookingEngine
+        <HbookBookingInline
           scriptSrc="https://s3-sa-east-1.amazonaws.com/hbook-universal-js/js/69664be7d22abe327315a40e.js"
-          title="Motor de Reservas Havana Palace II"
         />
       }
     />

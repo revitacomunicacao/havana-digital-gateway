@@ -3,6 +3,7 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { HashRouter, Routes, Route } from "react-router-dom";
+import HbookGlobalGuard from "@/components/HbookGlobalGuard";
 import Index from "./pages/Index";
 import HavanaPalaceI from "./pages/HavanaPalaceI";
 import HavanaPalaceII from "./pages/HavanaPalaceII";
@@ -21,6 +22,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <HashRouter>
+        <HbookGlobalGuard />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/unidade/havana-palace-i" element={<HavanaPalaceI />} />
