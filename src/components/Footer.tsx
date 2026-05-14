@@ -1,5 +1,13 @@
 import logo from "@/assets/logo_havana.webp";
 import { Phone, Mail, MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const footerUnits = [
+  { name: "Havana Palace I", href: "/unidade/havana-palace-i", cnpj: "04.356.635/0001-87" },
+  { name: "Havana Palace II", href: "/unidade/havana-palace-ii", cnpj: "14.023.124/0001-05" },
+  { name: "Havana Economy", href: "/unidade/havana-economy", cnpj: "33.881.545/0001-03" },
+  { name: "Havana Express", href: "/unidade/havana-express", cnpj: "37.532.759/0001-25" },
+] as const;
 
 const Footer = () => {
   return (
@@ -15,12 +23,18 @@ const Footer = () => {
 
           <div>
             <h4 className="font-display text-lg text-primary-foreground mb-4">Unidades</h4>
-            <ul className="space-y-2">
-              {["Havana Palace I", "Havana Palace II", "Havana Economy", "Havana Express"].map((u) => (
-                <li key={u}>
-                  <a href="#unidades" className="text-primary-foreground/60 hover:text-secondary text-sm font-body transition-colors">
-                    {u}
-                  </a>
+            <ul className="space-y-4">
+              {footerUnits.map((u) => (
+                <li key={u.href}>
+                  <Link
+                    to={u.href}
+                    className="block text-primary-foreground/60 hover:text-secondary text-sm font-body transition-colors"
+                  >
+                    {u.name}
+                  </Link>
+                  <p className="mt-1 text-primary-foreground/45 text-xs font-body tracking-wide">
+                    CNPJ {u.cnpj}
+                  </p>
                 </li>
               ))}
             </ul>

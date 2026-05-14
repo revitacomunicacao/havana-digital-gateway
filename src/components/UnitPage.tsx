@@ -19,6 +19,13 @@ const getIcon = (amenity: string) => {
   return key ? amenityIcons[key] : <Coffee size={20} />;
 };
 
+const unitCnpjBySlug: Record<string, string> = {
+  "havana-palace-i": "04.356.635/0001-87",
+  "havana-palace-ii": "14.023.124/0001-05",
+  "havana-economy": "33.881.545/0001-03",
+  "havana-express": "37.532.759/0001-25",
+};
+
 // Room types per unit
 const roomTypes: Record<string, { tipo: string; preco: string; diferenciais: string[]; imageIndex: number }[]> = {
   "havana-palace-i": [
@@ -257,7 +264,12 @@ const UnitPage = ({ unit, rooms: roomsProp, afterGallery, beforeAbout }: UnitPag
           <div className="max-w-4xl mx-auto">
             <div className="bg-background border border-border p-8 text-center">
               <MapPin size={40} className="text-secondary mx-auto mb-4" />
-              <p className="font-display text-xl font-semibold text-primary mb-2">{unit.name}</p>
+              <p className="font-display text-xl font-semibold text-primary mb-1">{unit.name}</p>
+              {unitCnpjBySlug[unit.slug] && (
+                <p className="text-muted-foreground font-body text-sm tracking-wide mb-3">
+                  CNPJ {unitCnpjBySlug[unit.slug]}
+                </p>
+              )}
               <p className="text-muted-foreground font-body text-base mb-6">{unit.address}</p>
               <a
                 href={unit.mapUrl}
